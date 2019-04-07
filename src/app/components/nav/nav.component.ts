@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as paths from '../../../static/paths.json';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  private readonly Logo = paths.default.images.logoSmall;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }
