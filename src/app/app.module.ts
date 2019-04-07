@@ -9,6 +9,8 @@ import { InsertPageComponent } from './components/insert-page/insert-page.compon
 import { ListPageComponent } from './components/list-page/list-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DetailPageComponent } from './components/detail-page/detail-page.component';
+import {appRoutes} from './app-routes';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { DetailPageComponent } from './components/detail-page/detail-page.compon
     DetailPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
