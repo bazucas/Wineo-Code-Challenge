@@ -25,7 +25,6 @@ import { HomeComponent } from './components/home/home.component';
 import { InsertPageComponent } from './components/insert-page/insert-page.component';
 import { ListPageComponent } from './components/list-page/list-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { DetailPageComponent } from './components/detail-page/detail-page.component';
 import {appRoutes} from './app-routes';
 
 @NgModule({
@@ -36,8 +35,7 @@ import {appRoutes} from './app-routes';
     HomeComponent,
     InsertPageComponent,
     ListPageComponent,
-    PageNotFoundComponent,
-    DetailPageComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
