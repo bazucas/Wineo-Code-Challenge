@@ -102,6 +102,7 @@ The Wineo icon and images were custom made by me.
 * Use real API and remove json-server.
 * Create user login/logout and register functionalities.
 * Add user comments.
+* Insert list form validation, besides required.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
