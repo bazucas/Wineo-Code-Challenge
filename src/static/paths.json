@@ -1,1 +1,10 @@
-{}
+{
+  "images" : {
+    "logoSmall": "../../assets/img/wineo_brand_small.png",
+    "logoMedium": "../../assets/img/wineo_brand_medium.png",
+    "logoBig": "../../assets/img/wineo_brand.png"
+  },
+  "endpoint" : {
+    "mock": "http://localhost:3000"
+  }
+}

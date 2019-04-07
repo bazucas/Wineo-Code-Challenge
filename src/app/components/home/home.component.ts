@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StaticService} from '../../services/static.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  private readonly Wineo = this.statics.images.logoBig;
+
+  constructor(private statics: StaticService) { }
 
   ngOnInit() {
   }
