@@ -9,8 +9,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {
   CheckboxModule,
-  DialogModule, InputTextModule,
-  PaginatorModule, RadioButtonModule, RatingModule,
+  DialogModule, InputTextareaModule, InputTextModule,
+  PaginatorModule, RadioButtonModule, RatingModule, ScrollPanelModule,
   TabViewModule
 } from 'primeng/primeng';
 import {DataViewModule} from 'primeng/dataview';
@@ -56,7 +56,9 @@ import {appRoutes} from './app-routes';
     RadioButtonModule,
     InputTextModule,
     RatingModule,
-    DropdownModule
+    DropdownModule,
+    InputTextareaModule,
+    ScrollPanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

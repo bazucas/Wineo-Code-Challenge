@@ -26,3 +26,11 @@ p-rating {
 button{
   margin: 5px;
 }
+.comments {
+  padding: 10px 0;
+  font-weight: normal;
+  width: 100%;
+}
+.property {
+  font-weight: bold;
+}

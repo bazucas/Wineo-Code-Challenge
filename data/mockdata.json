@@ -1,6 +1,9 @@
 {
   "bottles": [
     {
+      "0": "comment 1",
+      "1": "22222222222",
+      "2": "33333",
       "id": 1,
       "name": "Mateus Rosé The Original",
       "vineyard": "Sogrape Vinhos",
@@ -12,7 +15,11 @@
       "quantity": "3",
       "rate": 3.2,
       "comments": [
-        "test comment"
+        "comment 1",
+        "3333",
+        "555555",
+        "testsdf",
+        "cenas"
       ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/mateus-rose-the-original-450288.jpg",
@@ -22,7 +29,8 @@
         "tannin": 3,
         "alcohol": 12,
         "body": 5
-      }
+      },
+      "comment": 5
     },
     {
       "id": 2,
@@ -70,7 +78,8 @@
         "tannin": 3,
         "alcohol": 11,
         "body": 5
-      }
+      },
+      "comment": 9
     },
     {
       "id": 4,
@@ -94,7 +103,8 @@
         "tannin": 3,
         "alcohol": 12,
         "body": 5
-      }
+      },
+      "comment": 2
     },
     {
       "id": 5,

@@ -19,6 +19,7 @@ export class ListPageComponent implements OnInit, OnDestroy {
   sortKey: string;
   sortField: string;
   sortOrder: number;
+  comment = '';
 
   constructor(private apiService: ApiService) { }
 
@@ -86,5 +87,16 @@ export class ListPageComponent implements OnInit, OnDestroy {
       this.sortOrder = 1;
       this.sortField = value;
     }
+  }
+
+  addComment(bottle: any) {
+    const comments = _.cloneDeep(bottle.comments);
+    comments.push(this.comment);
+    const patchObj = {comments};
+    this.apiService.updateObject<Bottle>('bottles', bottle.id, patchObj as Bottle).subscribe(
+      res => {},
+      error => {},
+      () => { bottle.comments.push(this.comment); }
+    );
   }
 }

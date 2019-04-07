@@ -65,47 +65,57 @@
 
   <p-dialog header="Bottle Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '400px'}">
     <div class="ui-g">
-      <div class="ui-g-4">Name: </div>
-      <div class="ui-g-8">{{dialogBottle?.name}}</div>
+      <div class="ui-g-2">Name: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.name}}</div>
 
-      <div class="ui-g-4">Vineyard: </div>
-      <div class="ui-g-8">{{dialogBottle?.vineyard}}</div>
+      <div class="ui-g-2">Vineyard: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.vineyard}}</div>
 
-      <div class="ui-g-4">Location: </div>
-      <div class="ui-g-8">{{dialogBottle?.location}}</div>
+      <div class="ui-g-2">Location: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.location}}</div>
 
-      <div class="ui-g-4">Grape: </div>
-      <div class="ui-g-8">{{dialogBottle?.grape}}</div>
+      <div class="ui-g-2">Grape: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.grape}}</div>
 
-      <div class="ui-g-4">Year: </div>
-      <div class="ui-g-8">{{dialogBottle?.year}}</div>
+      <div class="ui-g-2">Year: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.year}}</div>
 
-      <div class="ui-g-4">Price: </div>
-      <div class="ui-g-8">{{dialogBottle?.price | currency}}</div>
+      <div class="ui-g-2">Price: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.price | currency}}</div>
 
-      <div class="ui-g-4">Varieties: </div>
-      <div class="ui-g-8">{{dialogBottle?.varieties}}</div>
+      <div class="ui-g-2">Varieties: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.varieties}}</div>
 
-      <div class="ui-g-4">Quantity: </div>
-      <div class="ui-g-8">{{dialogBottle?.quantity}}</div>
+      <div class="ui-g-2">Quantity: </div>
+      <div class="ui-g-4 property">{{dialogBottle?.quantity}}</div>
 
-      <div class="ui-g-4">Sweetness: </div>
-      <div class="ui-g-8">{{dialogBottle?.characteristics.sweetness}}</div>
+      <div class="ui-g-3">Sweetness: </div>
+      <div class="ui-g-3 property">{{dialogBottle?.characteristics.sweetness}}</div>
 
-      <div class="ui-g-4">Acidity: </div>
-      <div class="ui-g-8">{{dialogBottle?.characteristics.acidity}}</div>
+      <div class="ui-g-3">Acidity: </div>
+      <div class="ui-g-3 property">{{dialogBottle?.characteristics.acidity}}</div>
 
-      <div class="ui-g-4">Tannin: </div>
-      <div class="ui-g-8">{{dialogBottle?.characteristics.tannin}}</div>
+      <div class="ui-g-3">Tannin: </div>
+      <div class="ui-g-3 property">{{dialogBottle?.characteristics.tannin}}</div>
 
-      <div class="ui-g-4">Alcohol: </div>
-      <div class="ui-g-8">{{dialogBottle?.characteristics.alcohol}}</div>
+      <div class="ui-g-3">Alcohol: </div>
+      <div class="ui-g-3 property">{{dialogBottle?.characteristics.alcohol}}</div>
 
-      <div class="ui-g-4">Body: </div>
-      <div class="ui-g-8">{{dialogBottle?.characteristics.body}}</div>
+      <div class="ui-g-3">Body: </div>
+      <div class="ui-g-3 property">{{dialogBottle?.characteristics.body}}</div>
 
-      <div class="ui-g-4">Notes: </div>
-      <div class="ui-g-8">{{dialogBottle?.notes}}</div>
+      <div class="ui-g-3">Notes: </div>
+      <div class="ui-g-3 property">{{dialogBottle?.notes}}</div>
+
+      <div class="ui-g-4">Comment:</div>
+      <div class="ui-g-6"><textarea pInputTextarea [(ngModel)]="comment"></textarea></div>
+      <div class="ui-g-2"><p-button label="+" (click)="addComment(dialogBottle)"></p-button></div>
+
+      <div class="ui-g-12">Comments:</div>
+      <p-scrollPanel [style]="{width: '100%', height: '100px'}">
+        {{dialogBottle?.comments}}
+      </p-scrollPanel>
+
     </div>
   </p-dialog>
 
