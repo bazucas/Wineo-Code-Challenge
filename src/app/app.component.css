@@ -11,6 +11,6 @@
   height : 10px;
   display: inline-block;
 }
-/*#innerContent {*/
-/*  padding-top: 50px;*/
-/*}*/
+#innerContent {
+  padding-top: 30px;
+}

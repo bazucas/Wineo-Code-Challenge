@@ -1,3 +1,175 @@
-<p>
-  insert-page works!
-</p>
+<form [formGroup]="bottleInsertionForm" (ngSubmit)="persistNewBottle()">
+  <div class="center p-col-12">
+
+    <h3>Add new bottle</h3>
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="name" placeholder="Name">
+          <div *ngIf="submitted && f.name.errors || f.name.invalid && (f.name.dirty || f.name.touched)" class="invalid">
+            <div *ngIf="f.name.errors.required">Name is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="vineyard" placeholder="Vineyard">
+          <div *ngIf="submitted && f.vineyard.errors || f.vineyard.invalid && (f.vineyard.dirty || f.vineyard.touched)" class="invalid">
+            <div *ngIf="f.vineyard.errors.required">Vineyard is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="location" placeholder="Location">
+          <div *ngIf="submitted && f.location.errors || f.location.invalid && (f.location.dirty || f.location.touched)" class="invalid">
+            <div *ngIf="f.location.errors.required">Location is required</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-col-12">
+
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="grape" placeholder="Grape">
+          <div *ngIf="submitted && f.grape.errors || f.grape.invalid && (f.grape.dirty || f.grape.touched)" class="invalid">
+            <div *ngIf="f.grape.errors.required">Grape is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="year" placeholder="Year">
+          <div *ngIf="submitted && f.year.errors || f.year.invalid && (f.year.dirty || f.year.touched)" class="invalid">
+            <div *ngIf="f.year.errors.required">Year is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon">$</span>
+          <input type="text" pInputText formControlName="price" placeholder="Price">
+          <span class="ui-inputgroup-addon">.00</span>
+          <div *ngIf="submitted && f.price.errors || f.price.invalid && (f.price.dirty || f.price.touched)" class="invalid">
+            <div *ngIf="f.price.errors.required">Price is required</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-col-12">
+
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="varieties" placeholder="Varieties">
+          <div *ngIf="submitted && f.varieties.errors || f.varieties.invalid && (f.varieties.dirty || f.varieties.touched)" class="invalid">
+            <div *ngIf="f.location.errors.required">Varieties are required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="quantity" placeholder="Quantity">
+          <div *ngIf="submitted && f.quantity.errors || f.quantity.invalid && (f.quantity.dirty || f.quantity.touched)" class="invalid">
+            <div *ngIf="f.location.errors.required">Quantity is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="image" placeholder="Image">
+          <div *ngIf="submitted && f.image.errors || f.image.invalid && (f.image.dirty || f.image.touched)" class="invalid">
+            <div *ngIf="f.location.errors.required">Image is required</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-col-12">
+
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="sweetness" placeholder="Sweetness">
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="acidity" placeholder="Acidity">
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="tannin" placeholder="Tannin">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-col-12">
+
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="alcohol" placeholder="Alcohol">
+          <span class="ui-inputgroup-addon">%</span>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="body" placeholder="Body">
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup center">
+          <p>Has sulphites?</p>
+          <label>Yes</label>
+          <p-radioButton formControlName="sulphites" name="sulphites" value="True"></p-radioButton>
+          <label>No</label>
+          <p-radioButton formControlName="sulphites" name="sulphites" value="False"></p-radioButton>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="p-col-12">
+
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-6">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon">1</span>
+          <input type="text" pInputText formControlName="rate" placeholder="Rating">
+          <span class="ui-inputgroup-addon">5</span>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-6">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="notes" placeholder="Notes">
+        </div>
+      </div>
+    </div>
+
+    <button pButton label="Add Bottle" class="center"></button>
+
+  </div>
+</form>

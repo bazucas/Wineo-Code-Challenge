@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PanelModule} from 'primeng/panel';
 import {RouterModule} from '@angular/router';
 import {ButtonModule} from 'primeng/button';
+import {DropdownModule} from 'primeng/dropdown';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {
@@ -56,7 +57,8 @@ import {appRoutes} from './app-routes';
     TabViewModule,
     RadioButtonModule,
     InputTextModule,
-    RatingModule
+    RatingModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

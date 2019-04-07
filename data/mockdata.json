@@ -11,7 +11,9 @@
       "varieties": "Sirah & Touriga",
       "quantity": "3",
       "rate": 3.2,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/mateus-rose-the-original-450288.jpg",
       "characteristics": {
@@ -33,7 +35,9 @@
       "varieties": "Touriga & Sultana",
       "quantity": "3",
       "rate": 4.5,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/casal-mendes-blue-branco-1212825-s250.jpg",
       "characteristics": {
@@ -55,7 +59,9 @@
       "varieties": "Sirah & Carvalha",
       "quantity": "22",
       "rate": 4.7,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/casal-mendes-branco-1095529.jpg",
       "characteristics": {
@@ -77,7 +83,9 @@
       "varieties": "Chardonnay",
       "quantity": "11",
       "rate": 2.5,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/luc-belaire-rose-1104022.jpg",
       "characteristics": {
@@ -99,7 +107,9 @@
       "varieties": "Pinot Meunier",
       "quantity": "3",
       "rate": 3.3,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/luis-canas-crianza-1211694.jpg",
       "characteristics": {
@@ -121,7 +131,9 @@
       "varieties": "Chardonnay & Pinot Meunier",
       "quantity": "1",
       "rate": 4.2,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/moet-chandon-brut-imperial-165738.png",
       "characteristics": {
@@ -143,7 +155,9 @@
       "varieties": "Apple",
       "quantity": "35",
       "rate": 4.9,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/leduc-piedimonte-ice-cider-375ml-1284771-s372.jpg",
       "characteristics": {
@@ -165,7 +179,9 @@
       "varieties": "Whiskey",
       "quantity": "3",
       "rate": 1.9,
-      "comments": ["test comment"],
+      "comments": [
+        "test comment"
+      ],
       "notes": "test note",
       "image": "https://media-verticommnetwork1.netdna-ssl.com/wines/crown-royal-1l-437268.jpg",
       "characteristics": {
@@ -176,6 +192,28 @@
         "body": 3,
         "sulphites": true
       }
+    },
+    {
+      "name": "teste",
+      "vineyard": "asds",
+      "location": "adasd",
+      "grape": "asda",
+      "year": "sdasd",
+      "price": "32",
+      "varieties": "asdasd",
+      "quantity": "12",
+      "image": "https://img.tesco.com/Groceries/pi/464/5053526022464/IDShot_540x540.jpg",
+      "rate": "1",
+      "notes": "bad",
+      "characteristics": {
+        "sweetness": 1,
+        "acidity": 1,
+        "tannin": 2,
+        "alcohol": 12,
+        "body": 2,
+        "sulphites": true
+      },
+      "id": 9
     }
   ]
 }
