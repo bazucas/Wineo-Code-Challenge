@@ -101,7 +101,7 @@ The Wineo icon and images were custom made by me.
 * Remove inline styles and add them to the styles.scss.
 * Use real API and remove json-server.
 * Create user login/logout and register functionalities.
-* Add user comments.
+* Better user comments.
 * Insert list form validation, besides required.
 
 ## License
