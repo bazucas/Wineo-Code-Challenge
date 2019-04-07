@@ -1,28 +1,102 @@
-# MyWineCellarApp
+![alt text](./src/assets/img/wineo_brand_medium.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+# Wineo Code Challenge
 
-## Development server
+Senior frontend developer code challenge.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Demo
+Coming soon...
 
-## Code scaffolding
+[http://wineo.luisinacio.co.uk](http://wineo.luisinacio.co.uk/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requirements
 
-## Build
+### A customer has requested a web-app that can keep track of the customer's wine or beer cellar.
+* A list of bottles.
+* Detail view.
+* Possibility to add new bottles.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### The case is estimated to 2-4 hours.
 
-## Running unit tests
+### If you have more time, you may want to add more functionality:
+* Sorting in list view (Sort by name, vineyard, year, etc.).
+* Filtering in list view (filter on vineyard, year, etc.).
+* Add the user's comment / notes / rating.
+* Save entries on the device.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Your solution will be evaluated on the following:
+* Code quality.
+* Code architecture and organization.
+* Does the solution work?
+* Implementing your own creative ideas.
 
-## Running end-to-end tests
+### Rules:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* You can decide which tools you choose.
+* It must be clearly noted if there are parts of the code you have not written yourself.
+* You may want to use a build-setup - this setup is not included in the assessment (please
+supply both source files and a compiled version that works out of the box).
+* Your solution must be handed in as a git repository.
+* Add a readme file to the root of the project, explaining your architecture considerations,
+your priorities and whatever else you think could be important for us to know or pay
+attention to.
 
-## Further help
+## Running application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# Wineo-Code-Challenge
+Git clone the repository and install all the dependencies
+
+```bash
+git clone git@github.com:bazucas/Wineo-Code-Challenge.git
+npm install
+
+``` 
+Install [Json-Server](https://github.com/typicode/json-server) as a full fake REST API
+
+```bash
+npm install -g json-server
+
+```
+Open a terminal window and run json-server with the mocked data from the data folder
+
+```bash
+json-server --watch mockdata.json
+```
+
+Open another terminal windows and run the Angular application
+
+```bash
+npm start
+```
+
+## Architecture
+
+### Structure
+
+Due to the time constraints and relative complexity of the "good to have" functionalities, and to accommodate all, some decisions were made.
+
+* Simple flat folder structure with a single main module, without any lazy children modules, or shared modules.
+* Css used instead of pre-processors.
+* Inline styles accompany some html tags (future fix).
+* Mobile first concerns. 
+
+### Boilerplate code used
+
+* PrimeNg
+* PrimeFlex
+* Bootstrap
+* 404 page not found from [freefrontend](https://freefrontend.com/html-css-404-page-templates/)
+
+### Images
+
+The Wineo icon and images were custom made by me.
+
+## Todo List
+
+* Use SCSS pre-processor.
+* Remove inline styles and add them to the styles.scss.
+* Use real API and remove json-server.
+* Create user login/logout and register functionalities.
+* Add user comments.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
