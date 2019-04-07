@@ -1,0 +1,28 @@
+.ui-button {
+  margin-top: 3em;
+}
+.filter-container {
+  text-align: center;
+}
+@media (max-width: 40em) {
+  .bottle-details, .search-icon {
+    text-align: center;
+    margin-top: 0;
+  }
+  .filter-container {
+    text-align: left;
+  }
+}
+img {
+  width: auto;
+  height: 120px;
+}
+.list-container {
+  padding: 20px;
+}
+p-rating {
+  padding-top: 20px;
+}
+button{
+  margin: 5px;
+}

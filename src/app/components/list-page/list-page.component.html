@@ -1,3 +1,112 @@
-<p>
-  list-page works!
-</p>
+<div #dv class="list-container">
+  <p-dataView #dv [value]="allBottles" [paginator]="true" [rows]="4" paginatorPosition="both" filterBy="name"
+              [sortField]="sortField" [sortOrder]="sortOrder">
+    <p-header>
+      <div class="ui-helper-clearfix">
+        <div class="ui-g">
+          <div class="ui-g-12 ui-md-4">
+            <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By" (onChange)="onSortChange($event)" [style]="{'min-width':'140px'}"></p-dropdown>
+          </div>
+          <div class="ui-g-6 ui-md-4 filter-container">
+            <div style="position:relative">
+              <input type="search" pInputText placeholder="Search by name" (keyup)="dv.filter($event.target.value)">
+            </div>
+          </div>
+          <div class="ui-g-6 ui-md-4" style="text-align:right">
+            <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+          </div>
+        </div>
+      </div>
+    </p-header>
+    <ng-template let-bottle pTemplate="listItem">
+      <div class="ui-g" style="padding: 2em; border-bottom: 1px solid #d9d9d9">
+        <div class="ui-g-12 ui-md-3" style="text-align:center">
+          <img [src]="bottle.image" alt="bottle">
+          <p-rating [(ngModel)]="bottle.rate" [cancel]="false" [readonly]="true"></p-rating>
+        </div>
+        <div class="ui-g-12 ui-md-7 bottle-details">
+          <div class="ui-g">
+            <div class="ui-g-2 ui-sm-6">Name: </div>
+            <div class="ui-g-10 ui-sm-6"><b>{{bottle.name}}</b></div>
+
+            <div class="ui-g-2 ui-sm-6">Year: </div>
+            <div class="ui-g-10 ui-sm-6"><b>{{bottle.year}}</b></div>
+
+            <div class="ui-g-2 ui-sm-6">Vineyard: </div>
+            <div class="ui-g-10 ui-sm-6"><b>{{bottle.vineyard}}</b></div>
+
+            <div class="ui-g-2 ui-sm-6">Grapes: </div>
+            <div class="ui-g-10 ui-sm-6"><b>{{bottle.grape}}</b></div>
+
+            <div class="ui-g-2 ui-sm-6">Quantity: </div>
+            <div class="ui-g-10 ui-sm-6"><b>{{bottle.quantity}}</b></div>
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-2 search-icon">
+          <button pButton type="button" icon="pi pi-search" class="ui-button-warning" (click)="selectedBottle($event, bottle)"></button>
+          <button pButton type="button" icon="pi pi-plus" (click)="addBottle(bottle)"></button>
+          <button pButton type="button" icon="pi pi-minus" (click)="removeBottle(bottle)"></button>
+          <button pButton type="button" icon="pi pi-trash" class="ui-button-danger" (click)="deleteBottle(bottle)"></button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template let-bottle pTemplate="gridItem">
+      <div style="padding:.5em" class="ui-g-12 ui-md-3">
+        <p-panel [header]="bottle.name" [style]="{'text-align':'center'}">
+          <img [src]="bottle.image" width="60" alt="bottle">
+          <p-rating [(ngModel)]="bottle.rate" [cancel]="false" [readonly]="true"></p-rating>
+
+          <hr class="ui-widget-content" style="border-top:0">
+          <button pButton type="button" icon="pi pi-search" (click)="selectedBottle($event, bottle)" style="margin-top:0"></button>
+        </p-panel>
+      </div>
+    </ng-template>
+  </p-dataView>
+
+  <p-dialog header="Bottle Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '400px'}">
+    <div class="ui-g">
+      <div class="ui-g-4">Name: </div>
+      <div class="ui-g-8">{{dialogBottle?.name}}</div>
+
+      <div class="ui-g-4">Vineyard: </div>
+      <div class="ui-g-8">{{dialogBottle?.vineyard}}</div>
+
+      <div class="ui-g-4">Location: </div>
+      <div class="ui-g-8">{{dialogBottle?.location}}</div>
+
+      <div class="ui-g-4">Grape: </div>
+      <div class="ui-g-8">{{dialogBottle?.grape}}</div>
+
+      <div class="ui-g-4">Year: </div>
+      <div class="ui-g-8">{{dialogBottle?.year}}</div>
+
+      <div class="ui-g-4">Price: </div>
+      <div class="ui-g-8">{{dialogBottle?.price | currency}}</div>
+
+      <div class="ui-g-4">Varieties: </div>
+      <div class="ui-g-8">{{dialogBottle?.varieties}}</div>
+
+      <div class="ui-g-4">Quantity: </div>
+      <div class="ui-g-8">{{dialogBottle?.quantity}}</div>
+
+      <div class="ui-g-4">Sweetness: </div>
+      <div class="ui-g-8">{{dialogBottle?.characteristics.sweetness}}</div>
+
+      <div class="ui-g-4">Acidity: </div>
+      <div class="ui-g-8">{{dialogBottle?.characteristics.acidity}}</div>
+
+      <div class="ui-g-4">Tannin: </div>
+      <div class="ui-g-8">{{dialogBottle?.characteristics.tannin}}</div>
+
+      <div class="ui-g-4">Alcohol: </div>
+      <div class="ui-g-8">{{dialogBottle?.characteristics.alcohol}}</div>
+
+      <div class="ui-g-4">Body: </div>
+      <div class="ui-g-8">{{dialogBottle?.characteristics.body}}</div>
+
+      <div class="ui-g-4">Notes: </div>
+      <div class="ui-g-8">{{dialogBottle?.notes}}</div>
+    </div>
+  </p-dialog>
+
+</div>
