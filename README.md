@@ -78,6 +78,9 @@ Due to the time constraints and relative complexity of the "good to have" functi
 * Css used instead of pre-processors.
 * Inline styles accompany some html tags (future fix).
 * Mobile first concerns. 
+* CRUD functionalities added.
+* Generic API http verb methods.
+* Local update without refresh or API calls after persistence.
 
 ### Boilerplate code used
 
