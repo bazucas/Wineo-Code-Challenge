@@ -81,6 +81,8 @@ Due to the time constraints and relative complexity of the "good to have" functi
 * CRUD functionalities added.
 * Generic API http verb methods.
 * Local update without refresh or API calls after persistence.
+* Images inside assets folder.
+* Mock data outside of src folder, since it's an extrinsic component.
 
 ### Boilerplate code used
 
