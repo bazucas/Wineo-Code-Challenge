@@ -9,10 +9,12 @@ import * as paths from '../../../static/paths.json';
 export class NavComponent implements OnInit {
 
   private readonly Logo = paths.default.images.logoSmall;
+  private isCollapsed = true;
 
   constructor() {
   }
 
   ngOnInit() {
   }
+
 }

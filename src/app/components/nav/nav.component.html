@@ -1,19 +1,19 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"><img [src]="Logo" alt="logo"></a>
+      <a class="navbar-brand" [routerLink]="['/home']"><img [src]="Logo" alt="logo"></a>
     </div>
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" [collapse]="isCollapsed">
       <ul class="nav navbar-nav">
-        <li><a>Home</a></li>
-        <li><a>List bottles</a></li>
-        <li><a>Add bottles</a></li>
+        <li routerLinkActive="active"><a routerLink="/home">Home</a></li>
+        <li routerLinkActive="active"><a routerLink="/list">List bottles</a></li>
+        <li routerLinkActive="active"><a routerLink="/insert">Add bottles</a></li>
       </ul>
     </div>
   </div>
