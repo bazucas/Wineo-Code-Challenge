@@ -88,7 +88,7 @@ Due to the time constraints and relative complexity of the "good to have" functi
 
 * PrimeNg
 * PrimeFlex
-* Bootstrap
+* Ng Bootstrap
 * 404 page not found from [freefrontend](https://freefrontend.com/html-css-404-page-templates/)
 
 ### Images
